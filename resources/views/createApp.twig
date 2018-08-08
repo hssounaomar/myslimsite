@@ -1,0 +1,117 @@
+{% extends 'templates/app.twig' %}
+{% block navigationBar %}
+    <p></p>
+{% endblock %}
+{% block content %}
+
+<form class="form-horizontal" method="post" action="/apps/createApp">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Database Configuration</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Name *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="name" type="text" placeholder="Name of App" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">DBName *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="dbname" type="text" placeholder="DBName" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Login *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="login" type="text" placeholder="Login" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Password *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="password" type="text" placeholder="Password" class="form-control input-md">
+
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">IP *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="ip" type="text" placeholder="IP" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Query *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="query" type="text" placeholder="Query" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Port *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="port" type="text" placeholder="Port" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Type of DB *</label>
+            <div class="col-md-4">
+                <select name="type" class="form-control">
+                    <option value="oci">Oracle</option>
+                    <option value="mysql">Mysql</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Username *</label>
+            <div class="col-md-4">
+                <input id="textinput" name="username" type="text" placeholder="Username" class="form-control input-md" required>
+
+            </div>
+        </div>
+        <!-- Text input-->
+        <legend>Application Fields</legend>
+        {% for i in 1..10 %}
+        <div class="form-group">
+
+            <div class="col-md-4">
+                <input id="textinput" name="fieldName[]" type="text" placeholder="FiledName {{ i }}" class="form-control input-md">
+
+            </div>
+            <div class="col-md-4">
+                <input id="textinput" name="fieldValue[]" type="text" placeholder="FieldValue {{ i }}" class="form-control input-md">
+
+            </div>
+            <div class="col-md-4">
+                <select name="fieldType[]" class="form-control">
+                    <option value="date">Date</option>
+                    <option value="datetime">Datetime</option>
+                    <option value="tinyint(1)">Boolean</option>
+                    <option value="int(11)">Integer</option>
+                    <option value="double">Float</option>
+                    <option value="VARCHAR( 255 )">String</option>
+                </select>
+
+            </div>
+        </div>
+{% endfor %}
+        <!-- Button -->
+        <div class="form-group">
+
+            <div class="col-md-offset-6">
+                <button id="singlebutton" name="submit" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+{% endblock %}

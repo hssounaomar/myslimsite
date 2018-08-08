@@ -31,7 +31,7 @@ private  $dbLocalConnection;
 
         return $this->app->getConnection();
     }
-
+//add application
     public function add(){
        try{
                                                                                                                                 //$host, $username, $password, $database, $type, $port
@@ -41,13 +41,12 @@ private  $dbLocalConnection;
            $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
            $this->dbLocalConnection=$db->getConnection();
 
-           $result = $this->dbLocalConnection->prepare("INSERT INTO applications (name, dbname, login,password,ip,query,username,lastAuth,lastUpdate,status,matricule) values (?, ?, ?,?,?,?,?,?,?,?,?)");
-           $result->execute(array($this->app->getName(),$this->app->getDatabase(),$this->app->getLogin(),$this->app->getPassword(),$this->app->getHost(),
-               $this->app->getQuery(),$this->app->getUsername(),$this->app->getLastAuth(),$this->app->getLastUpdate(),$this->app->getStatus(),
-               $this->app->getMatricule()));
-
+           $result = $this->dbLocalConnection->prepare("INSERT INTO applications (name, dbname, login,password,ip,query) values (?, ?, ?,?,?,?)");
+           $result->execute(array($this->app->getName(),$this->app->getDatabase(),$this->app->getLogin(),
+               $this->app->getPassword(),$this->app->getHost(), $this->app->getQuery()));
+$id=$this->dbLocalConnection->lastInsertId();
           $this->dbLocalConnection=null;
-           return true;
+           return $id;
        }catch (PDOException $ex){
 return false;
        }
@@ -87,14 +86,9 @@ public  function  getApplicationByName($name){
     $this->dbLocalConnection=null;
     return $result->fetch();
 }
-public function  createTableUsers(){
-        /*
+public function  createTableUsers($fields){
 
-     derniere_auth  datetime,
-     derniere_auth datetime,
-     matricule VARCHAR( 255 ) ,
-     status tinyint(1)  );
-         */
+
         try{
 
 
@@ -103,22 +97,12 @@ public function  createTableUsers(){
     $table="users_".$this->app->getName();
     $sql=" CREATE TABLE $table (
      ID INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
-     username VARCHAR( 255 ) NOT NULL,";
-    $fields=array();
-if(!empty($this->app->getLastUpdate())){
-array_push($fields,"lastUpdate  datetime");
-}
-    if(!empty($this->app->getLastAuth())){
-        array_push($fields,"lastAuth  datetime");
-    }
-    if(!empty($this->app->getMatricule())){
-        array_push($fields,"matricule  VARCHAR( 255 )");
-    }
-    if(!empty($this->app->getMatricule())){
-        array_push($fields,"status tinyint(1) ");
-    }
-    $sql=$sql . implode(",", $fields).",authenticUsername VARCHAR( 255 ))";
-
+     ADUsername VARCHAR( 255 ),";
+    $lastElement=count($fields)-1;
+   for($i=0;$i<count($fields)-1;$i++){
+       $sql=$sql." ".$fields[$i]["name"]." ".$fields[$i]["type"].",";
+   }
+$sql=$sql." ".$fields[$lastElement]["name"]." ".$fields[$lastElement]["type"]." )";
 
 $this->dbLocalConnection->exec($sql);
 $this->dbLocalConnection=null;
@@ -127,51 +111,64 @@ $this->dbLocalConnection=null;
         }
 
 }
+public function addApplicationFields($fields,$idApp){
 
-    public function  fillTableUsers(){
+    try{
+
+
+        $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
+        $this->dbLocalConnection=$db->getConnection();
+        $result = $this->dbLocalConnection->prepare("INSERT INTO application_fields (name, value,type,app_id) values (?, ?, ?,?)");
+        for($i=0;$i<count($fields);$i++){
+            $result->execute(array($fields[$i]['name'],$fields[$i]['value'],$fields[$i]['type'],
+                $idApp));
+        }
+
+    }catch (PDOException $ex){
+        return false;
+    }
+}
+    public function  fillTableUsers($fields){
         try{
             $remoteConnection=$this->app->getConnection();
             $remoteConnection->query($this->app->getQuery());
-
+            $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
+            $this->dbLocalConnection=$db->getConnection();
+            $table="users_".$this->app->getName();
+            $values=array();
+            $names=array();
+            for($i=0;$i<count($fields);$i++){
+                array_push($values,"?");
+                array_push($names,$fields[$i]['name']);
+            }
+            $sql="INSERT INTO $table (".implode(",", $names).") values (".implode(",", $values).")";
             foreach ($remoteConnection->query($this->app->getQuery()) as $row){
-                $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
-                $this->dbLocalConnection=$db->getConnection();
-                $table="users_".$this->app->getName();
 
-                $fields=array('username');
-                $values=array('?');
-                $data=array($row[$this->app->getUsername()]);
-                if(!empty($this->app->getLastUpdate())){
-                    array_push($fields,"lastUpdate");
-                    array_push($values,"?");
-                    array_push($data,$row[$this->app->getLastUpdate()]);
+              //get
+               $data=array();
+                for($i=0;$i<count($fields);$i++){
+                    array_push($data,$row[$fields[$i]['value']]);
 
-                }
-                if(!empty($this->app->getLastAuth())){
-                    array_push($fields,"lastAuth");
-                    array_push($values,"?");
-                    array_push($data,$row[$this->app->getLastAuth()]);
-                }
-                if(!empty($this->app->getMatricule())){
-                    array_push($fields,"matricule");
-                    array_push($values,"?");
-                    array_push($data,$row[$this->app->getMatricule()]);
-                }
-                if(!empty($this->app->getStatus())){
-                    array_push($fields,"status");
-                    array_push($values,"?");
-                    array_push($data,$row[$this->app->getStatus()]);
                 }
                 //build query insert users
-                $sql="INSERT INTO $table (".implode(",", $fields).") values (".implode(",", $values).")";
+
               $result=  $this->dbLocalConnection->prepare($sql);
                 $result->execute($data);
             }
-
-
+$remoteConnection=null;
+            $this->dbLocalConnection=null;
 
         }catch (PDOException $ex){
+
             return false;
         }
+    }
+    public function  getFieldsOfApplicationById($id){
+        $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
+        $this->dbLocalConnection=$db->getConnection();
+        $result= $this->dbLocalConnection->prepare("select * from application_fields where app_id = ?");
+        $result->execute(array($id));
+        $this->dbLocalConnection=null;
+        return $result->fetchAll();
     }
 }

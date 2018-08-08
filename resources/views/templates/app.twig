@@ -40,7 +40,7 @@
 <body>
 
 <div id="wrapper">
-
+{% block navigationBar %}
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
@@ -50,7 +50,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+
+            <a  class="navbar-brand center-block" href="/apps/createApp"><i class="fa fa-plus fa-fw"></i> Create New Application</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -269,7 +270,7 @@
         {% endblock %}
         <!-- /.navbar-static-side -->
     </nav>
-
+{% endblock %}
     <div id="page-wrapper">
         {% block content %}
 

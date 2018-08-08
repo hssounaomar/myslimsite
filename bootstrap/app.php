@@ -11,6 +11,7 @@ $container['view'] = function ($container) {    $view = new \Slim\Views\Twig(__D
 
 
     $view->addExtension(new Slim\Views\TwigExtension($container->router, $container->request->getUri()));
+    $view->addExtension (new App\Models\DisplayUsers);
 
     return $view;
 };
