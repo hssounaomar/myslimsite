@@ -58,10 +58,10 @@ return false;
         $result= $this->dbLocalConnection->prepare("select * from applications");
         $result->execute();
         $this->dbLocalConnection=null;
-        return $result;
+        return $result->fetchAll();
 
     }
-    public function getUsersOfApplicationById($name){
+    public function getUsersOfApplicationByName($name){
         $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
         $this->dbLocalConnection=$db->getConnection();
 
@@ -69,7 +69,7 @@ return false;
         $result=$this->dbLocalConnection->prepare("select * from users_".$name);
         $result->execute();
         $this->dbLocalConnection=null;
-        return $result;
+        return $result->fetchAll();
     }
 
     public  function  closeConnection(){
@@ -82,9 +82,14 @@ public  function  getApplicationByName($name){
 
     //get users of application by name
     $result=$this->dbLocalConnection->prepare("select * from applications where  name = ?");
-    $result->execute(array($name));
     $this->dbLocalConnection=null;
-    return $result->fetch();
+   if($result->execute(array($name))) {
+       return $result->fetch();
+   }else{
+       return false;
+   }
+
+
 }
 public function  createTableUsers($fields){
 

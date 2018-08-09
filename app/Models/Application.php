@@ -23,6 +23,7 @@ protected $query;
 
     public function __construct( $name, $dbName, $host, $login, $password, $type, $port, $query)
     {
+
         //( $host, $username, $password, $database, $type, $port)
         parent::__construct($host,$login,$password,$dbName,$type,$port);
 

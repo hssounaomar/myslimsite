@@ -4,40 +4,42 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+    <title>Editor example - Simple inline editing</title>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/metisMenu/metisMenu.min.css" rel="stylesheet">
 
-
-
-    <!-- MetisMenu CSS -->
-    <link href="/metisMenu/metisMenu.css" rel="stylesheet">
-    <!-- DataTables CSS -->
-    <link href="/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
-
-    <!-- DataTables Responsive CSS -->
-    <link href="/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="/styles/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.17/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.6/css/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/editTable/editor.dataTables.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/editTable/demo.css">
+
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/metisMenu/metisMenu.min.js"></script>
+    <script src="/scripts/sb-admin-2.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.17/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/select/1.2.6/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/editTable/editor.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/editTable/shCore.js"></script>
+    <script type="text/javascript" language="javascript" src="/editTable/demo.js"></script>
+    <script type="text/javascript" language="javascript" src="/editTable/editor-demo.js"></script>
 
 
 
-    <!-- Custom Fonts -->
+
     <link href="/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
-<body>
+<body class="dt-example" style=" font-size: small;">
 
 <div id="wrapper">
 {% block navigationBar %}
@@ -271,34 +273,18 @@
         <!-- /.navbar-static-side -->
     </nav>
 {% endblock %}
-    <div id="page-wrapper">
+
         {% block content %}
 
         {% endblock %}
-    </div>
+
     <!-- /#page-wrapper -->
 
 </div>
-<script src="/jquery/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/metisMenu/metisMenu.min.js"></script>
 
-<!-- DataTables JavaScript -->
-<script src="/datatables/js/jquery.dataTables.min.js"></script>
-<script src="/datatables-plugins/dataTables.bootstrap.min.js"></script>
-<script src="/datatables-responsive/dataTables.responsive.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="/scripts/sb-admin-2.js"></script>
-<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-<script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
-        });
-    });
-</script>
+
+
 
 </body>
 

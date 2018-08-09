@@ -16,6 +16,10 @@
       <path value="$PROJECT_DIR$/vendor/font-awesome/less" />
       <path value="$PROJECT_DIR$/vendor/font-awesome/scss" />
       <path value="$PROJECT_DIR$/vendor/font-awesome/fonts" />
+      <path value="$PROJECT_DIR$/vendor/EditTable/Ext" />
+      <path value="$PROJECT_DIR$/vendor/EditTable/Editor" />
+      <path value="$PROJECT_DIR$/vendor/EditTable/Vendor" />
+      <path value="$PROJECT_DIR$/vendor/EditTable/Database" />
     </include_path>
   </component>
 </project>

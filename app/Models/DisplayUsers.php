@@ -15,24 +15,27 @@ class DisplayUsers extends \Slim\Views\TwigExtension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('DisplayUsers', array($this, 'DisplayUsers'))
+            new \Twig_SimpleFunction('DisplayFields', array($this, 'DisplayFields'))
         ];
     }
 
-    public function DisplayUsers ($users,$fields)
+    public function DisplayFields ($fields)
     {
-        $str="";
+        $str="[";
 
-        foreach ($users as $user){
-            $test=$fields;
-            $str=$str."<tr>";
-            foreach ($test as $field){
+        foreach ($fields as $field){
 
-                $str=$str. "<td>".$user[$field['name']]."</td>";
-            }
-            $str=$str."<td>".$user['ADUsername']."</td></tr>";
+$str=$str. '{
+                        label: "{{ '.$field['name'].' }}:",
+                        name: "{{ '.$field['name'].' }}"
+                    },';
+
 
         }
+        $str=$str.'{
+        label: "AuthenticUsername:",
+                        name: "ADUsername"
+                    }]';
         echo $str;
 
     }
