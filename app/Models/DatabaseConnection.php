@@ -53,8 +53,15 @@ class DatabaseConnection
     // Get mysqli connection
     public function getConnection() {
         try{
+            if($this->type=="oci"){
 
-            $this->connection = new PDO($this->type.':host='.$this->host.':'.$this->port.';dbname='.$this->database,$this->login,$this->password);
+                $this->connection = new PDO('oci:dbname='.$this->host.'/'.$this->database."; charset=utf8", $this->login, $this->password);
+
+            }else{
+                $this->connection = new PDO('mysql:host='.$this->host.';dbname='.$this->database.';port='.$this->port."; charset=utf8",$this->login,$this->password);
+            }
+
+
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $this->connection;
 

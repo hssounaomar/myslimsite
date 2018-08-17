@@ -50,19 +50,23 @@ $this->view->render($response,"home.twig",array("apps"=>$apps,"users"=>$users,"a
             $type=$_POST['type'];
             $port=$_POST['port'];
             $query=$_POST['query'];
+            $email=$_POST['email'];
             //get fields
             $username=$_POST['username'];
             $names=$_POST['fieldName'];
             $values=$_POST['fieldValue'];
             $types=$_POST['fieldType'];
 
-            $app=new Application($name, $dbName, $host, $login, $password, $type, $port, $query);
+            $app=new Application($name, $dbName, $host, $login, $password, $type, $port, $query,$email);
             $rep=new ApplicationRepository($app);
             //test remote connection
             if($rep->testConnection()){
+
                 $rep->closeConnection();
                 //add app with success
-                if($idApp=$rep->add()) {
+
+               if($idApp=$rep->add()) {
+
                    //create table users for the new app
                     //get fields
                     $fields=array(array("name"=>"username","value"=>$_POST['username'],"type"=>"VARCHAR( 255 )"));
@@ -127,13 +131,62 @@ public  function displayUsersByApplication($request,$response,$args){
 
 
         if($request->isGet()){
-            $data=  json_encode( $data ).":[]}";
-            echo  $data;
+            if(empty($data['data'])){
+                echo json_encode( $data );
+            }else{
+                $data=  json_encode( $data ).":[]}";
+                echo  $data;
+            }
+
         }
         if($request->isPost()){
             echo json_encode( $data );
         }
 
+
+}
+public  function  displayUsers($request,$response,$args){
+    $rep=new ApplicationRepository();
+    $apps=$rep->getApplications();
+    $data=array();
+    foreach ($apps as $app){
+        $users=$rep->getUsersHasADUsernameByApplication($app['name']);
+        if(!empty($users)){
+
+            foreach ($users as $user){
+                array_push($data,array("app"=>$app['name'],"username"=>$user['username'],"ADUsername"=>$user['ADUsername']));
+            }
+
+        }
+    }
+    return $this->view->render($response,"users.twig",array("data"=>$data,"apps"=>$apps));
+}
+public function sendEmail($request,$response,$args){
+        require __DIR__.'/../../vendor/SendEmail/PHPMailer-master/PHPMailerAutoload.php';
+    require  __DIR__ . '/../../vendor/SendEmail/send_mail.php';
+    $data = $_POST['msg'];
+if(empty($data)){
+    echo "<script>console.log('jkjk')</script>";
+}else{
+if(is_array($data)){
+    $rep=new ApplicationRepository();
+
+    foreach ($data as $row){
+        $app=$rep->getApplicationByName($row[0]);
+        //sendMail($mailto,$mailSub,$mailMsg,$Username,$pwd)
+
+        sendMail($app['email'],$row[0],"supp user ".$row[1],"omar.hsouna@sesame.com.tn","hsouna007");
+
+    }
+}else{
+    echo $data."string";
+}
+
+
+
+}
+}
+public function manageApplications($request,$response,$args){
 
 }
 }

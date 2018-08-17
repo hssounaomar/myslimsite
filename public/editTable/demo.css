@@ -318,7 +318,10 @@ div.tabs {
 	clear: both;
 	margin-top: -1px;
 }
-
+.red {
+	font-size: 50px;
+	color: 	#8B0000;
+}
 div.tabs>div {
 	padding: 15px;
 	border: 1px solid #ccc;

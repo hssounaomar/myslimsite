@@ -20,6 +20,7 @@
       <path value="$PROJECT_DIR$/vendor/EditTable/Editor" />
       <path value="$PROJECT_DIR$/vendor/EditTable/Vendor" />
       <path value="$PROJECT_DIR$/vendor/EditTable/Database" />
+      <path value="$PROJECT_DIR$/vendor/SendEmail/PHPMailer-master" />
     </include_path>
   </component>
 </project>

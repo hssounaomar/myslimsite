@@ -2,53 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60e56c3d-8b58-4db0-88b1-f16c2c1be68a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/editTable/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/editTable/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/editTable/editor-demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/editTable/editor.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/editTable/editor.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/editTable/shCore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/DataTables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Db2/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Db2/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Firebird/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Firebird/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Mysql/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Mysql/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Oracle/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Oracle/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Postgres/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Postgres/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Sqlite/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Sqlite/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Sqlserver/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Driver/Sqlserver/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Database/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Editor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Field.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Format.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Join.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Mjoin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Upload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Validate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Editor/Validate/Options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Ext/Ext.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Vendor/Htmlaw.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/Vendor/htmLawed/htmLawed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/EditTable/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/myslimSite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myslimSite.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DisplayUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DisplayUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/DatabaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DatabaseConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/editTable/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/editTable/demo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/createApp.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/createApp.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/templates/app.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/app.twig" afterDir="false" />
@@ -68,71 +30,8 @@
       <file leaf-file-name="home.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="119" column="61" selection-start-line="119" selection-start-column="61" selection-end-line="119" selection-end-column="61" />
-              <folding>
-                <element signature="e#35#4886#0#Twig" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="92" column="55" lean-forward="true" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
-              <folding>
-                <element signature="e#36#63#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/EditTable/Editor/Field.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ext.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/EditTable/Ext/Ext.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="71" column="33" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/EditTable/Editor/Editor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="1308" column="20" selection-start-line="1308" selection-start-column="15" selection-end-line="1308" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="279" selection-start-line="279" selection-end-line="279" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="332">
+              <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -140,8 +39,58 @@
       <file leaf-file-name="createApp.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/createApp.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="1122">
+              <caret line="66" column="123" selection-start-line="66" selection-start-column="123" selection-end-line="66" selection-end-column="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="e#36#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/users.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.dataTables.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/editTable/editor.dataTables.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="126" selection-start-line="32" selection-start-column="126" selection-end-line="32" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -149,8 +98,8 @@
       <file leaf-file-name="ApplicationRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Repositories/ApplicationRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+            <state relative-caret-position="90">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding>
                 <element signature="e#118#145#0#PHP" expanded="true" />
               </folding>
@@ -158,11 +107,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <file leaf-file-name="DatabaseConnection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/DatabaseConnection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="306">
+              <caret line="60" column="133" selection-start-line="60" selection-start-column="133" selection-end-line="60" selection-end-column="133" />
+              <folding>
+                <element signature="e#110#119#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
@@ -185,6 +146,9 @@
       <find>$this-&gt;_out</find>
       <find>field</find>
       <find>inst</find>
+      <find>tra</find>
+      <find>tables</find>
+      <find>test</find>
     </findStrings>
     <replaceStrings>
       <replace>app</replace>
@@ -202,20 +166,23 @@
         <option value="$PROJECT_DIR$/app/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Models/MyEnum.php" />
         <option value="$PROJECT_DIR$/app/Models/TypeOfFields.php" />
-        <option value="$PROJECT_DIR$/app/Models/DatabaseConnection.php" />
         <option value="$PROJECT_DIR$/public/ajax/getUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/updateUsers.twig" />
         <option value="$PROJECT_DIR$/bootstrap/DisplayUserers.php" />
         <option value="$PROJECT_DIR$/bootstrap/DisplayUsers.php" />
-        <option value="$PROJECT_DIR$/app/Models/Application.php" />
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/vendor/EditTable/Editor/Editor.php" />
         <option value="$PROJECT_DIR$/app/Models/DisplayUsers.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/public/editTable/demo.css" />
         <option value="$PROJECT_DIR$/resources/views/templates/app.twig" />
+        <option value="$PROJECT_DIR$/vendor/SendEmail/send_mail.php" />
+        <option value="$PROJECT_DIR$/resources/views/users.twig" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/Models/Application.php" />
         <option value="$PROJECT_DIR$/resources/views/createApp.twig" />
         <option value="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" />
         <option value="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" />
+        <option value="$PROJECT_DIR$/app/Models/DatabaseConnection.php" />
         <option value="$PROJECT_DIR$/resources/views/home.twig" />
       </list>
     </option>
@@ -246,6 +213,7 @@
       <path value="$PROJECT_DIR$/vendor/EditTable/Editor" />
       <path value="$PROJECT_DIR$/vendor/EditTable/Vendor" />
       <path value="$PROJECT_DIR$/vendor/EditTable/Database" />
+      <path value="$PROJECT_DIR$/vendor/SendEmail/PHPMailer-master" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -258,7 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,17 +264,6 @@
             <path>
               <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -328,10 +284,17 @@
               <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SendEmail" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,17 +304,17 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\myslimSite\app\Models" />
-      <recent name="C:\wamp64\www\myslimSite\public" />
-      <recent name="C:\wamp64\www\myslimSite\public\styles" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\myslimSite\vendor\SendEmail" />
       <recent name="C:\wamp64\www\myslimSite\public\editTable" />
       <recent name="C:\wamp64\www\myslimSite\vendor" />
       <recent name="C:\wamp64\www\myslimSite\app" />
       <recent name="C:\wamp64\www\myslimSite\public" />
-      <recent name="C:\wamp64\www\myslimSite\public\scripts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\myslimSite\app\Models" />
+      <recent name="C:\wamp64\www\myslimSite\public" />
+      <recent name="C:\wamp64\www\myslimSite\public\styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,18 +354,23 @@
       <workItem from="1533455488890" duration="1781000" />
       <workItem from="1533542428832" duration="28058000" />
       <workItem from="1533714574055" duration="14320000" />
-      <workItem from="1533801392788" duration="13735000" />
+      <workItem from="1533801392788" duration="15729000" />
+      <workItem from="1534005688054" duration="3374000" />
+      <workItem from="1534151281697" duration="12278000" />
+      <workItem from="1534232948414" duration="16401000" />
+      <workItem from="1534434959858" duration="7537000" />
+      <workItem from="1534494410788" duration="4381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128595000" />
+    <option name="totallyTimeSpent" value="174560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22693998" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2035139" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -430,31 +398,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+    <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="1088">
+          <caret line="64" column="58" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
+          <folding>
+            <element signature="e#36#63#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -657,36 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/DatabaseConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-          <folding>
-            <element signature="e#110#119#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/EditTable/Database/Database.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/EditTable/Bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/DisplayUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -703,53 +623,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/EditTable/Editor/Editor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="22066">
           <caret line="1308" column="20" selection-start-line="1308" selection-start-column="15" selection-end-line="1308" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/EditTable/Ext/Ext.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="1054">
           <caret line="71" column="33" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/EditTable/Editor/Field.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="918">
           <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
+    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
+        <state relative-caret-position="102">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="3" column="21536" selection-start-line="3" selection-start-column="21536" selection-end-line="3" selection-end-column="21536" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/editTable/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5474">
+          <caret line="322" column="20" selection-start-line="322" selection-start-column="20" selection-end-line="322" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/editTable/editor.dataTables.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/SendEmail/send_mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/createApp.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="1122">
+          <caret line="66" column="123" selection-start-line="66" selection-start-column="123" selection-end-line="66" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="126" selection-start-line="32" selection-start-column="126" selection-end-line="32" selection-end-column="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ApplicationRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+        <state relative-caret-position="90">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding>
             <element signature="e#118#145#0#PHP" expanded="true" />
           </folding>
@@ -758,21 +726,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="92" column="55" lean-forward="true" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
+        <state relative-caret-position="950">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="e#36#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/DatabaseConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="60" column="133" selection-start-line="60" selection-start-column="133" selection-end-line="60" selection-end-column="133" />
+          <folding>
+            <element signature="e#110#119#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="119" column="61" selection-start-line="119" selection-start-column="61" selection-end-line="119" selection-end-column="61" />
-          <folding>
-            <element signature="e#35#4886#0#Twig" />
-          </folding>
+        <state relative-caret-position="332">
+          <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
         </state>
       </provider>
     </entry>

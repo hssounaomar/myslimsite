@@ -40,10 +40,10 @@ private  $dbLocalConnection;
            //execute(array(":name"=>$this->app->getName(),":appname"=>$this->app->getDatabase(),"login"=>$this->app->getLogin(),"password",$this->app->getPassword(),"ip"));
            $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
            $this->dbLocalConnection=$db->getConnection();
-
-           $result = $this->dbLocalConnection->prepare("INSERT INTO applications (name, dbname, login,password,ip,query) values (?, ?, ?,?,?,?)");
+$db=null;
+           $result = $this->dbLocalConnection->prepare("INSERT INTO applications (name, dbname, login,password,ip,query,email) values (?, ?, ?,?,?,?,?)");
            $result->execute(array($this->app->getName(),$this->app->getDatabase(),$this->app->getLogin(),
-               $this->app->getPassword(),$this->app->getHost(), $this->app->getQuery()));
+               $this->app->getPassword(),$this->app->getHost(), $this->app->getQuery(),$this->app->getEmail()));
 $id=$this->dbLocalConnection->lastInsertId();
           $this->dbLocalConnection=null;
            return $id;
@@ -69,6 +69,7 @@ return false;
         $result=$this->dbLocalConnection->prepare("select * from users_".$name);
         $result->execute();
         $this->dbLocalConnection=null;
+
         return $result->fetchAll();
     }
 
@@ -99,6 +100,7 @@ public function  createTableUsers($fields){
 
     $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
     $this->dbLocalConnection=$db->getConnection();
+    $db=null;
     $table="users_".$this->app->getName();
     $sql=" CREATE TABLE $table (
      ID INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
@@ -135,10 +137,10 @@ public function addApplicationFields($fields,$idApp){
 }
     public function  fillTableUsers($fields){
         try{
-            $remoteConnection=$this->app->getConnection();
-            $remoteConnection->query($this->app->getQuery());
+
+            //$remoteConnection->query($this->app->getQuery());
             $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
-            $this->dbLocalConnection=$db->getConnection();
+
             $table="users_".$this->app->getName();
             $values=array();
             $names=array();
@@ -146,7 +148,15 @@ public function addApplicationFields($fields,$idApp){
                 array_push($values,"?");
                 array_push($names,$fields[$i]['name']);
             }
+
             $sql="INSERT INTO $table (".implode(",", $names).") values (".implode(",", $values).")";
+            $remoteConnection=$this->app->getConnection();
+
+
+
+
+            $this->dbLocalConnection=$db->getConnection();
+            $db=null;
             foreach ($remoteConnection->query($this->app->getQuery()) as $row){
 
               //get
@@ -176,4 +186,15 @@ $remoteConnection=null;
         $this->dbLocalConnection=null;
         return $result->fetchAll();
     }
+    public  function  getUsersHasADUsernameByApplication($name){
+        $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
+        $this->dbLocalConnection=$db->getConnection();
+
+        //get users of application by name
+        $result=$this->dbLocalConnection->prepare("select ADUsername,username from users_".$name." where ADUsername IS NOT NULL");
+        $result->execute();
+        $this->dbLocalConnection=null;
+        return $result->fetchAll();
+    }
+
 }
