@@ -1,4 +1,7 @@
 {% extends "templates/app.twig" %}
+
+
+
 {% block contentOfNavBar %}
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
@@ -31,11 +34,7 @@
                 </li>
 
 
-                <li>
-                    <a href="/apps/manage"><i class="fa fa-wrench fa-fw"></i> Manage Applications</a>
 
-                    <!-- /.nav-second-level -->
-                </li>
                 <li>
                     <a href="/users"><i class="fa fa-users fa-fw"></i> Users</a>
                 </li>
@@ -48,113 +47,142 @@
 {% endblock %}
 {% block content %}
     <div id="page-wrapper">
-    <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-12" style="width: 100%;">
+                <div  role="alert" id="result"></div>
+                <button id="pdf">PDF</button>
+                <button id="excel" style="margin-bottom: 6px;">EXCEL</button>
+                <div class="panel panel-default">
 
-    <div class="row">
-    <div class="col-lg-12" style="width: 100%;">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-    <div class="row">
-        <div class="col-md-offset-3 col-md-2"> <a href="/apps/{{ app.name }}/delete"><i class="fa fa-trash fa-fw red" style="font-size: 18px;
-  color: 	#8B0000;"></i> Delete {{ app.name | upper }}</a></div>
-        <div class="col-md-offset-1 col-md-2"> <a href="/apps/{{ app.name }}/update"><i class="fa fa-edit fa-fw"></i> Update {{ app.name | upper }}</a></div>
+                    <div class="panel-heading">
 
-    </div>
-                          </div>
-
-            <!-- /.panel-heading -->
-            <div class="container">
+                        <div class="row">
+                            <div class="col-md-4"><span style="font-weight: bold;">Users of Application {{ app.name | upper }}</span></div>
+                            <div class="col-md-4"><span> <a href="/apps/{{ app.name }}/update"  style="cursor: pointer;"><i class="fa fa-edit fa-fw"></i> Update {{ app.name }}</a></span></div>
+                            <div class="col-md-4"><span> <a href="#" onclick="deleteApplication()" style="cursor: pointer;"><i class="fa fa-trash fa-fw"></i> Delete {{ app.name }}</a></span></div>
+                        </div>
 
 
-                <div class="demo-html"></div>
-                <table id="example" class="display" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th></th>
-                        {% for field in fields %}
-                            <th>{{ field.name }}</th>
-                        {% endfor %}
-                        <th>ADUsername</th>
-                    </tr>
-                    </thead>
-                </table>
+                    </div>
+
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table id="example" class="display nowrap" style="width:100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                            <tr>
+                                {% for field in fields %}
+                                    <th>{{ field.name }}</th>
+                                {% endfor %}
+                                <th>ADUsername</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for user in users %}
+                                <tr>
+                            {% for field in fields %}
+                                <td>{{ user[field.name] }}</td>
+                            {% endfor %}
+                                    <td contenteditable="true" id="{{ user['ID'] }}">{{ user['ADUsername'] }}</td>
+                            {% endfor %}
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
             </div>
-            <!-- /.panel -->
         </div>
-        <!-- /.col-lg-12 -->
+        <!-- -->
+
     </div>
-    <!-- Code script DataTable -->
 
-    <script type="text/javascript" language="javascript" class="init">
+<script type="text/javascript">
+    var table=  $('#example').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
 
+        ]
+    } );
+function deleteApplication(){
+    var txt;
+    var r = confirm("Do you really want to delete app {{ app.name | upper }} ?");
+    if (r == true) {
+        $.ajax({url: "/apps/{{ app.name }}/delete", type:"POST",  success: function(result){
+                displayAlert(result);
+            }})
+    }
 
-
-        var editor; // use a global for the submit and return data rendering in the examples
-
-        $(document).ready(function() {
-
-
-
-            editor = new $.fn.dataTable.Editor( {
-                ajax: "/apps/ajax/{{ app.name }}",
-                table: "#example",
-                fields: [
-
-
-
-                    {
-                        label: "ADUsername:",
-                        name: "ADUsername"
-                    }
-                ]
-            } );
-
-            // Activate an inline edit on click of a table cell
-            $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
-                editor.inline( this );
-            } );
-
-            $('#example').DataTable( {
-                dom: "Bfrtip",
-                ajax: "/apps/ajax/{{ app.name }}",
-                order: [[ 1, 'asc' ]],
-                columns: [
-                    {
-                        data: null,
-                        defaultContent: '',
-                        className: 'select-checkbox',
-                        orderable: false
-                    },
-                    {% for field in fields %}
-                    { data: "{{ field.name }}"},
-
-                    {% endfor %}
+}
+function displayAlert(result){
+    if(result!=""){
+        $("#result").attr('class', 'alert alert-success  alert-dismissible');
+        $("#result").html("Success <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>");
+    }else {
+        $("#result").attr('class', 'alert alert-danger  alert-dismissible');
+        $("#result").html("Failure <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>");
+    }
+    setTimeout( function() {
+        // Code to do stuff after 300ms
+        $("#result").removeClass("alert alert-success");
+        $("#result").html("");
+    }, 1000);
+    }
+    var oldValue;
+    $("td[contenteditable=true]").mousedown(function () {
+        oldValue = $(this).text() ;
+    })
+    $("td[contenteditable=true]").blur(function(){
+        var userid = $(this).attr("id") ;
+        var newValue = $(this).text() ;
 
 
-                    { data: "ADUsername",className:'editable'}
-                ],
-                select: {
-                    style:    'os',
-                    selector: 'td:first-child'
-                },
-                buttons: [
-                  'excel', 'pdf'
-                ]
-            } );
-            $("input[type=\"search\"]").on( 'keyup', function () {
+if(newValue!= oldValue){
+    $.ajax({url: "/apps/ajax/{{ app.name }}", type:"POST", data:{id : userid,newValue:newValue}, success: function(result){
+            displayAlert(result);
+            location.reload(true);
+        }});
+}
 
 
 
-            } );
-                    } );
+
+    });
+    //generate pdf table
+    $('#pdf').click( function () {
+        var columns = [{% for field in fields %}
+            "{{ field.name }}",
+            {% endfor %} "ADUsername"];
+
+        var rows = [
+            {% for user in users %}
+            {% if loop.last %}
+            [{% for field in fields %}"{{ user[field.name] }}", {% endfor %}  "{{ user.ADUsername }}"]
+                    {% else %}
+                [{% for field in fields %}"{{ user[field.name] }}", {% endfor %} "{{ user.ADUsername }}"],
+            {% endif %}
+            {% endfor %}
 
 
+        ];
 
-    </script>
-    </div>
-    </div>
-    <input type="button" id="btnOpenDialog" value="Open Confirm Dialog" />
-    <div id="dialog-confirm"></div>
+// Only pt supported (not mm or in)
+        var doc = new jsPDF('p', 'pt');
+        doc.autoTable(columns, rows);
+        doc.save('table.pdf');
+    });
+
+    $("#excel").click(function(e){
+        $.ajax({url: "/apps/ajax/excel/{{ app.name }}", type:"POST", success: function(result){
+                var res=$.trim(result);
+                if(res!=""){
+                    e.preventDefault();
+                    window.location.href='/appUsers.xlsx';
+                }
+            }});
+    });
+
+</script>
 
 {% endblock %}

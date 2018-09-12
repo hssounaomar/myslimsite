@@ -1,10 +1,12 @@
 {% extends 'templates/app.twig' %}
-{% block navigationBar %}
+{% block createApp %}
     <p></p>
 {% endblock %}
 {% block content %}
+    <br>
 <div class="container">
-<form class="form-horizontal " method="post" action="/apps/createApp">
+
+<form class="form-horizontal " method="post" action="/apps/createApp" id="form">
     <fieldset>
 
         <!-- Form Name -->
@@ -14,7 +16,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Name *</label>
             <div class="col-md-4">
-                <input id="textinput" name="name" type="text" placeholder="Name of App" class="form-control input-md" required>
+                <input id="textinput" name="name" type="text" placeholder="Name of App" class="form-control input-md" pattern="[A-Za-z]+" required>
 
             </div>
         </div>
@@ -87,39 +89,83 @@
         </div>
         <!-- Text input-->
         <legend>Application Fields</legend>
-        {% for i in 1..10 %}
-        <div class="form-group">
+        <div id="result"></div>
+        {% for i in 2..10 %}
+            <div class="form-group">
 
-            <div class="col-md-4">
-                <input id="textinput" name="fieldName[]" type="text" placeholder="FiledName {{ i }}" class="form-control input-md">
+                <div class="col-md-4 col-md-offset-2">
+                    <input id="textinput" name="fieldName[]" type="text" placeholder="FiledName {{ i }}" class="form-control input-md">
 
-            </div>
-            <div class="col-md-4">
-                <input id="textinput" name="fieldValue[]" type="text" placeholder="FieldValue {{ i }}" class="form-control input-md">
+                </div>
+                <div class="col-md-4">
+                    <input id="textinput" name="fieldValue[]" type="text" placeholder="FieldValue {{ i }}" class="form-control input-md">
 
-            </div>
-            <div class="col-md-4">
-                <select name="fieldType[]" class="form-control">
-                    <option value="date">Date</option>
-                    <option value="datetime">Datetime</option>
-                    <option value="tinyint(1)">Boolean</option>
-                    <option value="int(11)">Integer</option>
-                    <option value="double">Float</option>
-                    <option value="VARCHAR( 255 )">String</option>
-                </select>
+                </div>
 
             </div>
-        </div>
-{% endfor %}
+        {% endfor %}
+
         <!-- Button -->
         <div class="form-group">
 
-            <div class="col-md-offset-6">
-                <button id="singlebutton" name="submit" class="btn btn-primary">Send</button>
+            <div class="text-center">
+                <button id="singlebutton" type="button"   class="btn btn-primary" >Send</button>
+
             </div>
+
         </div>
 
     </fieldset>
+    {{ csrf.field | raw }}
 </form>
 </div>
+    <script>
+        $( document ).ready(function() {
+            var form = $("form");
+        $('#singlebutton').click(function(e) { // catch the form's submit event
+
+
+            $.ajax({ // create an AJAX call...
+                data: form.serialize(), // get the form data
+                type: form.attr('method'), // GET or POST
+                url: form.attr('action'), // the file to call
+                success: function(response) { // on success..
+                    var res=$.trim(response);
+                    if(res===""){
+window.location.replace("/apps")
+                    }else{
+                        $("#result").attr('class', 'alert alert-danger  alert-dismissible fade in');
+                        $("#result").html(response+'<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>');
+                        setTimeout( function() {
+                            // Code to do stuff after 300ms
+                            $("#result").removeClass("alert alert-danger");
+                            $("#result").html("");
+                        }, 2000);
+                    }
+
+                }
+            });
+
+            e.preventDefault();
+        });
+
+        });
+        /*
+        var id =1;
+        function  addField(){
+           var prev=id;
+            id=id+1;
+            if(id>10) {
+                alert('you cannot insert more than 10 fields');
+            }else{
+                $( "<div class='form-group' id='field-"+id+"'> <div class='col-md-4 col-md-offset-2'> <input id='textinput' name='fieldName[]' type='text' placeholder='FiledName "+id+"' class='form-control input-md'> </div> <div class='col-md-4'> <input id='textinput' name='fieldValue[]' type='text' placeholder='FieldValue "+id+"' class='form-control input-md'> </div><div><button type='button' class='btn btn-danger btn-circle' onclick='removeField()' id='"+id+"'><i class='fa fa-minus'></i></button></div> </div>" )
+                    .insertAfter($( "#field-" +prev)  );
+            }
+
+        }
+        function removeField() {
+            $( "#field-"+this.id ).remove();
+            id=id-1;
+        }*/
+    </script>
 {% endblock %}

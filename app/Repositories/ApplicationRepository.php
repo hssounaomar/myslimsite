@@ -41,9 +41,10 @@ private  $dbLocalConnection;
            $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
            $this->dbLocalConnection=$db->getConnection();
 $db=null;
-           $result = $this->dbLocalConnection->prepare("INSERT INTO applications (name, dbname, login,password,ip,query,email) values (?, ?, ?,?,?,?,?)");
+           $result = $this->dbLocalConnection->prepare("INSERT INTO applications (name, dbname, login,password,ip,query,email,type,port) values (?, ?, ?,?,?,?,?,?,?)");
            $result->execute(array($this->app->getName(),$this->app->getDatabase(),$this->app->getLogin(),
-               $this->app->getPassword(),$this->app->getHost(), $this->app->getQuery(),$this->app->getEmail()));
+               $this->app->getPassword(),$this->app->getHost(), $this->app->getQuery(),$this->app->getEmail(),
+               $this->app->getType(),$this->app->getPort()));
 $id=$this->dbLocalConnection->lastInsertId();
           $this->dbLocalConnection=null;
            return $id;
@@ -107,9 +108,9 @@ public function  createTableUsers($fields){
      ADUsername VARCHAR( 255 ),";
     $lastElement=count($fields)-1;
    for($i=0;$i<count($fields)-1;$i++){
-       $sql=$sql." ".$fields[$i]["name"]." ".$fields[$i]["type"].",";
+       $sql=$sql." ".$fields[$i]["name"]." varchar(255) ,";
    }
-$sql=$sql." ".$fields[$lastElement]["name"]." ".$fields[$lastElement]["type"]." )";
+$sql=$sql." ".$fields[$lastElement]["name"]." varchar(255)  )";
 
 $this->dbLocalConnection->exec($sql);
 $this->dbLocalConnection=null;
@@ -125,9 +126,9 @@ public function addApplicationFields($fields,$idApp){
 
         $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
         $this->dbLocalConnection=$db->getConnection();
-        $result = $this->dbLocalConnection->prepare("INSERT INTO application_fields (name, value,type,app_id) values (?, ?, ?,?)");
+        $result = $this->dbLocalConnection->prepare("INSERT INTO application_fields (name, value,app_id) values (?, ?, ?)");
         for($i=0;$i<count($fields);$i++){
-            $result->execute(array($fields[$i]['name'],$fields[$i]['value'],$fields[$i]['type'],
+            $result->execute(array($fields[$i]['name'],$fields[$i]['value'],
                 $idApp));
         }
 
@@ -191,10 +192,70 @@ $remoteConnection=null;
         $this->dbLocalConnection=$db->getConnection();
 
         //get users of application by name
-        $result=$this->dbLocalConnection->prepare("select ADUsername,username from users_".$name." where ADUsername IS NOT NULL");
+        $result=$this->dbLocalConnection->prepare("select ADUsername,username from users_".$name." where ADUsername IS NOT NULL AND TRIM(IFNULL(ADUsername,'')) <> ''");
         $result->execute();
         $this->dbLocalConnection=null;
         return $result->fetchAll();
     }
+public  function updateADUsername($appName,$id,$newValue){
+    $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
+    $this->dbLocalConnection=$db->getConnection();
+    $result= $this->dbLocalConnection->prepare("update users_".$appName." SET  ADUsername = ? WHERE ID = ?");
+    $result->execute(array($newValue,$id));
+    $this->dbLocalConnection=null;
+}
+public function deleteApplication($name){
+        $test=false;
+    $db=new DatabaseConnection("127.0.0.1","root","","ooredoo","mysql","3306");
+    $this->dbLocalConnection=$db->getConnection();
+    $result= $this->dbLocalConnection->prepare(" DELETE FROM applications WHERE name = ?");
 
+    $result->execute(array($name));
+    if($result->rowCount()>0){
+        $result= $this->dbLocalConnection->prepare(" DROP TABLE users_".$name);
+       if($result->execute()){
+           $test=true;
+       }
+
+        $this->dbLocalConnection=null;
+    }
+    return $test;
+
+}
+public function testQuery(){
+        try{
+            $conn=$this->app->getConnection();
+            $conn->query($this->app->getQuery());
+           $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+           $conn=null;
+            return true;
+        }catch (PDOException $ex){
+            return false;
+        }
+
+}
+public function testFields($fields){
+    try{
+        $test=true;
+        $conn=$this->app->getConnection();
+        $res=$conn->prepare($this->app->getQuery());
+        $res->execute(array());
+        $row=$res->fetch();
+
+
+    for($i=0;$i<count($fields);$i++){
+        if(!array_key_exists($fields[$i]["value"],$row)){
+            $test=false;
+            break;
+        }
+    }
+
+
+$conn=null;
+
+        return $test;
+    }catch (PDOException $ex){
+        return false;
+    }
+}
 }

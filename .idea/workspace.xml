@@ -2,18 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60e56c3d-8b58-4db0-88b1-f16c2c1be68a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/datatables.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/myslimSite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myslimSite.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DatabaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DatabaseConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/editTable/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/editTable/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/createApp.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/createApp.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/templates/app.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/app.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users.twig" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,31 +34,16 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="myslimSite" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/home.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createApp.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/createApp.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="123" selection-start-line="66" selection-start-column="123" selection-end-line="66" selection-end-column="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ApplicationsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="184">
+              <caret line="231" column="22" selection-start-line="231" selection-start-column="18" selection-end-line="231" selection-end-column="22" />
               <folding>
                 <element signature="e#36#63#0#PHP" expanded="true" />
               </folding>
@@ -57,73 +51,95 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <file leaf-file-name="createApp.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/createApp.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/users.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editor.dataTables.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/editTable/editor.dataTables.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="437">
+              <caret line="105" column="20" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="105" selection-end-column="20" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#66#73#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
+      <file leaf-file-name="updateApplication.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/updateApplication.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="126" selection-start-line="32" selection-start-column="126" selection-end-line="32" selection-end-column="126" />
+            <state relative-caret-position="85">
+              <caret line="93" column="120" selection-start-line="93" selection-start-column="120" selection-end-line="93" selection-end-column="120" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/ApplicationRepository.php">
+      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Validation/Rules/Connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="187">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionException.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Validation/Exceptions/ConnectionException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailAvailableException.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Validation/Exceptions/EmailAvailableException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="19" column="2" selection-start-line="15" selection-end-line="19" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Validator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Validation/Validator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
               <folding>
-                <element signature="e#118#145#0#PHP" expanded="true" />
+                <element signature="e#117#177#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseConnection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/DatabaseConnection.php">
+      <file leaf-file-name="EmailAvailable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Validation/Rules/EmailAvailable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="60" column="133" selection-start-line="60" selection-start-column="133" selection-end-line="60" selection-end-column="133" />
+            <state relative-caret-position="136">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="41" />
               <folding>
-                <element signature="e#110#119#0#PHP" expanded="true" />
+                <element signature="e#122#142#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Application.php">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controllers/Auth/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="238">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="49" />
+              <folding>
+                <element signature="e#122#153#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="74" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -132,23 +148,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>db</find>
-      <find>connection</find>
-      <find>sear</find>
-      <find>sea</find>
-      <find>n</find>
-      <find>upd</find>
-      <find>SB</find>
-      <find>&lt;i&gt;</find>
-      <find>$db</find>
-      <find>data()</find>
-      <find>json</find>
-      <find>$this-&gt;_out</find>
-      <find>field</find>
-      <find>inst</find>
       <find>tra</find>
       <find>tables</find>
       <find>test</find>
+      <find>aa</find>
+      <find>$fields</find>
+      <find>has</find>
+      <find>addA</find>
+      <find>fetch</find>
+      <find>singleb</find>
+      <find>created</find>
+      <find>getA</find>
+      <find>fill</find>
+      <find>getf</find>
+      <find>inser</find>
+      <find>result</find>
+      <find>files</find>
+      <find>trim</find>
+      <find>mana</find>
+      <find>data</find>
+      <find>id=&quot;</find>
+      <find>manag</find>
+      <find>sear</find>
+      <find>cre</find>
+      <find>users</find>
+      <find>class=&quot;text-center</find>
+      <find>err</find>
+      <find>twig</find>
+      <find>erro</find>
+      <find>error</find>
+      <find>upda</find>
     </findStrings>
     <replaceStrings>
       <replace>app</replace>
@@ -170,20 +199,43 @@
         <option value="$PROJECT_DIR$/resources/views/updateUsers.twig" />
         <option value="$PROJECT_DIR$/bootstrap/DisplayUserers.php" />
         <option value="$PROJECT_DIR$/bootstrap/DisplayUsers.php" />
-        <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/vendor/EditTable/Editor/Editor.php" />
         <option value="$PROJECT_DIR$/app/Models/DisplayUsers.php" />
         <option value="$PROJECT_DIR$/public/editTable/demo.css" />
-        <option value="$PROJECT_DIR$/resources/views/templates/app.twig" />
         <option value="$PROJECT_DIR$/vendor/SendEmail/send_mail.php" />
-        <option value="$PROJECT_DIR$/resources/views/users.twig" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/Models/Application.php" />
-        <option value="$PROJECT_DIR$/resources/views/createApp.twig" />
-        <option value="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" />
-        <option value="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" />
         <option value="$PROJECT_DIR$/app/Models/DatabaseConnection.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/ApplicationRepository.php" />
+        <option value="$PROJECT_DIR$/app/Models/User.php" />
+        <option value="$PROJECT_DIR$/app/Controllers/Validation/Validator.php" />
+        <option value="$PROJECT_DIR$/app/Middleware/Middleware.php" />
+        <option value="$PROJECT_DIR$/app/Validation/Validator.php" />
+        <option value="$PROJECT_DIR$/app/Validation/Exceptions/EmailAvailableException.php" />
+        <option value="$PROJECT_DIR$/app/Validation/Rules/EmailAvailable.php" />
+        <option value="$PROJECT_DIR$/app/Middleware/CsrfViewMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Middleware/ValidationErrorsMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Middleware/OldInputMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Auth/Auth.php" />
+        <option value="$PROJECT_DIR$/app/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Middleware/AuthMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Middleware/GuestMiddleware.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/app.twig" />
+        <option value="$PROJECT_DIR$/resources/views/users.twig" />
+        <option value="$PROJECT_DIR$/resources/views/auth/signin.twig" />
+        <option value="$PROJECT_DIR$/resources/views/auth/signup.twig" />
         <option value="$PROJECT_DIR$/resources/views/home.twig" />
+        <option value="$PROJECT_DIR$/resources/views/app/home.twig" />
+        <option value="$PROJECT_DIR$/resources/views/app/createApp.twig" />
+        <option value="$PROJECT_DIR$/resources/views/errorNotFound.twig" />
+        <option value="$PROJECT_DIR$/resources/views/Error.twig" />
+        <option value="$PROJECT_DIR$/bootstrap/app.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/errorNotAllowed.twig" />
+        <option value="$PROJECT_DIR$/app/Validation/Rules/Connection.php" />
+        <option value="$PROJECT_DIR$/app/Validation/Exceptions/ConnectionException.php" />
+        <option value="$PROJECT_DIR$/app/Controllers/ApplicationsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/createApp.twig" />
+        <option value="$PROJECT_DIR$/resources/views/updateApplication.twig" />
       </list>
     </option>
   </component>
@@ -214,11 +266,25 @@
       <path value="$PROJECT_DIR$/vendor/EditTable/Vendor" />
       <path value="$PROJECT_DIR$/vendor/EditTable/Database" />
       <path value="$PROJECT_DIR$/vendor/SendEmail/PHPMailer-master" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/respect/validation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/slim/csrf" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/slim/flash" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="522" />
-    <option name="width" value="851" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -226,6 +292,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,19 +309,40 @@
               <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Repositories" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Validation" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Validation" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Exceptions" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Validation" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Rules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
@@ -277,44 +365,34 @@
               <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="myslimSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myslimSite" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="SendEmail" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../inlineEdit/Edit-In-Place-Plugin-jQuery/Edit-In-Place-Plugin-jQuery" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\myslimSite\vendor\SendEmail" />
-      <recent name="C:\wamp64\www\myslimSite\public\editTable" />
-      <recent name="C:\wamp64\www\myslimSite\vendor" />
-      <recent name="C:\wamp64\www\myslimSite\app" />
-      <recent name="C:\wamp64\www\myslimSite\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\myslimSite\resources\views" />
+      <recent name="C:\wamp64\www\myslimSite\resources\views\app" />
+      <recent name="C:\wamp64\www\myslimSite\resources\views\error" />
+      <recent name="C:\wamp64\www\myslimSite\app" />
       <recent name="C:\wamp64\www\myslimSite\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\myslimSite\public" />
       <recent name="C:\wamp64\www\myslimSite\public\styles" />
+      <recent name="C:\wamp64\www\myslimSite\public\scripts" />
+      <recent name="C:\wamp64\www\myslimSite\vendor\SendEmail" />
+      <recent name="C:\wamp64\www\myslimSite\public\editTable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -359,18 +437,41 @@
       <workItem from="1534151281697" duration="12278000" />
       <workItem from="1534232948414" duration="16401000" />
       <workItem from="1534434959858" duration="7537000" />
-      <workItem from="1534494410788" duration="4381000" />
+      <workItem from="1534494410788" duration="14146000" />
+      <workItem from="1534579279243" duration="9113000" />
+      <workItem from="1534665206523" duration="2378000" />
+      <workItem from="1534760388295" duration="6404000" />
+      <workItem from="1534942117401" duration="2685000" />
+      <workItem from="1535009681219" duration="21155000" />
+      <workItem from="1535096382483" duration="3750000" />
+      <workItem from="1535212922910" duration="10532000" />
+      <workItem from="1535272817694" duration="8004000" />
+      <workItem from="1535359024255" duration="9565000" />
+      <workItem from="1535396022086" duration="1950000" />
+      <workItem from="1535445454837" duration="14164000" />
+      <workItem from="1535530833816" duration="6742000" />
+      <workItem from="1535643392841" duration="3287000" />
+      <workItem from="1535703828142" duration="3258000" />
+      <workItem from="1535796207434" duration="681000" />
+      <workItem from="1535881240258" duration="227000" />
+      <workItem from="1535883912547" duration="3726000" />
+      <workItem from="1535968554795" duration="9421000" />
+      <workItem from="1536058098299" duration="11415000" />
+      <workItem from="1536136615965" duration="10808000" />
+      <workItem from="1536224816522" duration="4347000" />
+      <workItem from="1536309940616" duration="5408000" />
+      <workItem from="1536737835842" duration="948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174560000" />
+    <option name="totallyTimeSpent" value="334293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2035139" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6614173" visible="true" weight="0.2137628" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -380,7 +481,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.33858266" side_tool="true" visible="true" weight="0.2137628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -400,183 +501,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="58" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
-          <folding>
-            <element signature="e#36#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/app.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -593,34 +523,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/ajax/getUsers.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/updateUsers.twig" />
-    <entry file="file://$PROJECT_DIR$/app/Models/TypeOfFields.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/MyEnum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/DisplayUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/EditTable/Editor/Editor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22066">
@@ -642,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/font-awesome/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -663,33 +558,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/editTable/editor.dataTables.min.js">
+    <entry file="file://$PROJECT_DIR$/public/datatables.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="17" column="1252" selection-start-line="17" selection-start-column="1252" selection-end-line="17" selection-end-column="1252" />
         </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17255">
+          <caret line="1015" column="9" selection-start-line="1015" selection-start-column="9" selection-end-line="1015" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/SendEmail/PHPMailer-master/PHPMailerAutoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/SendEmail/send_mail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="17">
+          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/users.twig">
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state relative-caret-position="-704" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/MyEnum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/DisplayUsers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="357">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -700,54 +610,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/createApp.twig">
+    <entry file="file://$PROJECT_DIR$/app/Models/TypeOfFields.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="123" selection-start-line="66" selection-start-column="123" selection-end-line="66" selection-end-column="123" />
+        <state relative-caret-position="102">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
+    <entry file="file://$PROJECT_DIR$/app/Middleware/Middleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="126" selection-start-line="32" selection-start-column="126" selection-end-line="32" selection-end-column="126" />
+        <state relative-caret-position="187">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Middleware/ValidationErrorsMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Middleware/CsrfViewMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Middleware/OldInputMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ApplicationRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="503">
+          <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/DatabaseConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Middleware/AuthMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Middleware/GuestMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Auth/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/signup.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="98" selection-start-line="11" selection-start-column="98" selection-end-line="11" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2397">
+          <caret line="141" column="25" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/signin.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/app.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Error.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="122" column="70" selection-start-line="122" selection-start-column="70" selection-end-line="122" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errorNotFound.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="148" column="78" lean-forward="true" selection-start-line="148" selection-start-column="11" selection-end-line="148" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/errorNotAllowed.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Validation/Rules/EmailAvailable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="41" />
           <folding>
-            <element signature="e#118#145#0#PHP" expanded="true" />
+            <element signature="e#122#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Validation/Rules/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Validation/Exceptions/EmailAvailableException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="2" selection-start-line="15" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Validation/Exceptions/ConnectionException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Validation/Validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding>
+            <element signature="e#117#177#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#122#153#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/ApplicationsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="184">
+          <caret line="231" column="22" selection-start-line="231" selection-start-column="18" selection-end-line="231" selection-end-column="22" />
           <folding>
             <element signature="e#36#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/DatabaseConnection.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/createApp.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="60" column="133" selection-start-line="60" selection-start-column="133" selection-end-line="60" selection-end-column="133" />
+        <state relative-caret-position="437">
+          <caret line="105" column="20" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="105" selection-end-column="20" />
           <folding>
-            <element signature="e#110#119#0#PHP" expanded="true" />
+            <element signature="e#66#73#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.twig">
+    <entry file="file://$PROJECT_DIR$/resources/views/updateApplication.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
+        <state relative-caret-position="85">
+          <caret line="93" column="120" selection-start-line="93" selection-start-column="120" selection-end-line="93" selection-end-column="120" />
         </state>
       </provider>
     </entry>
